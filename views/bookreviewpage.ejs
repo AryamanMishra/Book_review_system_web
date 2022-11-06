@@ -8,12 +8,28 @@
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
     
     <!-- styles -->
-    <link rel="stylesheet" href="/css/bookreview.css">
+    <link rel="stylesheet" href="/css/bookreviewpage.css">
 
 </head>
 <body>
     <section class="section-center">
         <h1>Rate this book:</h1>
+        <div class="container">
+        <div class="card">
+            <div class="box">
+              <div class="content">
+                <img src="/images/book<%=number%>.jpg" alt="book">
+                <p>Current Rating : <%=book.rating%></p>
+                <form action="/users/:id/home/book/:number" method="post">
+                    <input type="number" id="rating" name="rating" min="1" max="5">
+                    <br>
+                    <input type="text" value="<%= book.number %>" name="number" hidden>
+                    <button id="submit_button">Submit Rating</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
     </section>
 </body>
 </html>

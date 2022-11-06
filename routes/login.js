@@ -33,7 +33,6 @@ router.post('/users/existing', async(req,res) => {
         const validPassword = await bcrypt.compare(password,user.password)
         if (validPassword) {
             req.session.user_id = user._id
-            req.flash('success_log_in', 'Logged In Successfully')
             res.redirect(`/users/${user._id}/home`) // User found
         }
         else {

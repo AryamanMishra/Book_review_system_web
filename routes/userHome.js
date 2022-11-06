@@ -7,19 +7,15 @@ const requireLogin = require('../middleware/requireLogin')
 
 /* Required models to be used */
 const User = require('../models/user');
-const Blog = require('../models/book');
+const Books = require('../models/book');
 
 
 /* User home page */
 router.get('/users/:id/home', requireLogin, async(req,res) => {
-    try {
-        const { id } = req.params
-        const user = await User.findById(id)
-        res.render('users/userHome', {user}) // Home page
-    }
-    catch {
-        res.render('users/userDetailserror')
-    }
+    const { id } = req.params
+    const user = await User.findById(id)
+    const books = await Books.find()
+    res.render('users/userHome', {user,books}) // Home page
 }) 
 
 

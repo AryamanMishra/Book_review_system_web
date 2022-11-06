@@ -17,8 +17,12 @@
         <div class="card">
           <div class="box">
             <div class="content">
-              <img src="/images/book1.jpg" alt="book1">
-                <p>Rating:</p>
+              <a href="/users/<%= user._id %>/home/book/1">
+                  <img src="/images/book1.jpg" alt="book1">
+                  <p>Rating:</p>
+                  <p><%= books[0].rating %>/5</p>
+              </a>
+              
             </div>
           </div>
         </div>
@@ -26,8 +30,11 @@
         <div class="card">
           <div class="box">
             <div class="content">
+              <a href="/users/<%= user._id %>/home/book/2">
                 <img src="/images/book2.jpg" alt="book2">
                 <p>Rating:</p>
+                <p><%= books[1].rating %>/5</p>
+              </a>
             </div>
           </div>
         </div>
@@ -35,16 +42,22 @@
         <div class="card">
           <div class="box">
             <div class="content">
+              <a href="/users/<%= user._id %>/home/book/3">
                 <img src="/images/book3.jpg" alt="book3">
                 <p>Rating:</p>
+                <p><%= books[2].rating %>/5</p>
+              </a>
             </div>
           </div>
         </div>
         <div class="card">
             <div class="box">
               <div class="content">
+                <a href="/users/<%= user._id %>/home/book/4">
                   <img src="/images/book4.jpeg" alt="book4">
                   <p>Rating:</p>
+                  <p><%= books[3].rating %>/5</p>
+                </a>
               </div>
             </div>
         </div>

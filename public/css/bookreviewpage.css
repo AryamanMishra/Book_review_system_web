@@ -8,3 +8,86 @@
 body {
     background-color: #0d1117;
 }
+
+h1 {
+    font-size: 40px;
+    color: #58A6FF;
+    width: 90%;
+    text-align: center;
+    padding-left: 30px;
+    margin-top: 100px;
+}
+
+body .container {
+  display:grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 40px 0;
+  padding-top: 10px;
+  padding-left: 210px;
+}
+
+
+
+
+body .container .card {
+  position: relative;
+  min-width: 310px;
+  height: 440px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  margin: 30px;
+  transition: 0.5s;
+}
+
+
+
+body .container .card .box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: #2a2b2f;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+
+
+body .container .card .box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+body .container .card .box .content {
+  padding: 20px;
+  text-align: center;
+}
+
+#rating{
+  background-color: black;
+  color: white;
+}
+
+#submit_button{
+  font-size: 15px;
+  background-color: purple;
+  color: wheat;
+  margin-top: 15px;
+  cursor: pointer;
+}

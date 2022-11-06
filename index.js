@@ -68,7 +68,6 @@ app.use(session(sessionConfig))
 
 
 
-console.log(__dirname)
 
 /* Use method of express to access static files like html and css and images */
 app.use(express.static(__dirname + '/public'));
@@ -125,6 +124,28 @@ app.use('/', userHomeRoute)
 
 
 
+app.get('/users/:id/home/book/:number', async(req,res) => {
+    const id  = req.session.user_id
+    const { number } = req.params
+    const book = await Book.findOne({number})
+    res.render('bookreviewpage', {number,id,book})
+})
+
+
+app.post('/users/:id/home/book/:number', async(req,res) => {
+    const id  = req.session.user_id
+    const rating_rec = req.body.rating
+    const number  = req.body.number
+    const book = await Book.findOne({number})
+    let current_rat = book.rating
+    current_rat += Number(rating_rec)
+    current_rat /= 2
+
+    await Book.updateOne({number:number,rating:current_rat})
+    res.redirect(`/users/${id}/home/`)
+})
+
+
 
 
 
@@ -133,6 +154,7 @@ app.use('/', userHomeRoute)
 app.get('*', requireLogin, (req,res) => {
     res.render('pageNotFound')
 })
+
 
 
 

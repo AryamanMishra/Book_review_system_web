@@ -181,6 +181,10 @@ body .container .card .box .content {
   text-align: center;
 }
 
+.checked {
+    color: orange;
+}
+
 
 
 body .container .card .box .content p {
