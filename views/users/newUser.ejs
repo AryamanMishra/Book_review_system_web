@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New User</title>
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+    
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/newUser.css">
+
+</head>
+<body>
+    <h1 class="title">New User</h1>
+    <form action="/users/new" method="POST" style="text-align: center;" class="signup-form">
+        <label for="email">Enter your Name:</label>
+        <input type="text" id="name" placeholder="Name" name="name" required>
+        <br>
+        <label for="email">Enter your email address</label>
+        <input type="text" id="email" placeholder="Email" name="email" required>
+        <br>
+        <label for="password"> Enter password: </label>
+        <input type="password" id="password" name="password" placeholder="Enter a password" required minlength="8"><button style="background-color: black;color:white;cursor:pointer" onclick="show()" type="button" id="showpasswordbutton">Show Password</button>
+        <br>
+        <button class="btn" onclick="show()">Sign Up</button>
+        <button class="btn wide"><a href="/">Back to Home page</a></button>
+    </form>
+</body>
+<script>
+    function show() {
+        let password = document.getElementById('password')
+        let showpasswordbutton = document.getElementById('showpasswordbutton')
+        if (password.type == 'password') {
+            password.type = 'text'
+            showpasswordbutton.textContent = 'Hide Password'
+        }
+        else {
+            password.type = 'password'
+            showpasswordbutton.textContent = 'Show Password'
+        }
+    }
+</script>
+</html>

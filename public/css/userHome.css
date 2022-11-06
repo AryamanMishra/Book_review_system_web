@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Mukta', sans-serif;
+    color: #58A6FF;
+}
+body {
+    background-color: #0d1117;
+}
+.title {
+    position: absolute;
+    text-align: center;
+    font-size: 2rem;
+    width: 100%;
+}
+
+.title1 {
+    color:lime;
+    position: absolute;
+    text-align: center;
+    font-size: 2rem;
+    width: 100%;
+    margin-top: 6rem;
+}
+.btn-container {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,-50%);
+}
+.btn {
+    margin-top: 0.4rem;
+    cursor: pointer;
+    background-color: #238636;
+    border: 2px solid white;
+    padding: 0.35rem;
+    width: 200px;
+    font-size: 1.2rem;
+}
+
+.btn:hover {
+    border-color: #238636;
+    transition: all 0.8s ease-in;
+    background-color: blue
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+.btn:hover a {
+    color: yellow;
+    transition: all 0.8s ease-in;
+}
+
+
+
+@media screen and (max-width: 500px) {
+    .title {
+        font-size: 1.6rem;
+        margin-top: 6rem;
+    }
+    .btn {
+        width: 170px;
+    }
+}
+#name {
+    background-color: black;
+    color: white;
+    width: 45em;
+    margin-top: 1.5em;
+}
+#searchButton {
+    background-color: black;
+    color: white;
+}
+
+.dropbtn {
+    background-color:#238636;
+    color: white;
+    padding: 16px;
+    font-size: 1.2rem;
+    border: 2px solid white;
+    cursor: pointer;
+    width: 10.4em;
+    border-top: 4em;
+  }
+  
+.dropdown {
+    position: relative;
+    height: 0.5em;
+    margin-top: 0.4rem;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 12.5em;
+}
+  
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+  
+.dropdown-content a:hover {background-color:greenyellow}
+  
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+  
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+
+
+
+body .container {
+  display:grid;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 40px 0;
+  padding-top: 180px;
+  padding-left: 300px;
+}
+
+
+
+
+body .container .card {
+  position: relative;
+  min-width: 310px;
+  height: 440px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+    inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+    5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  margin: 30px;
+  transition: 0.5s;
+}
+
+
+
+body .container .card .box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  background: #2a2b2f;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+
+
+body .container .card .box:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+body .container .card .box .content {
+  padding: 20px;
+  text-align: center;
+}
+
+
+
+body .container .card .box .content p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  z-index: 1;
+  transition: 0.5s;
+}
+
+
+
